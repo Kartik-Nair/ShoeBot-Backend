@@ -4,6 +4,11 @@ from config import api_url, subscription_key, request_id, openAiKey
 from openai import OpenAI
 
 class CLUReq:
+
+    def __init__(self):
+        return
+    
+
     def call_clu_model(self, participant_id, text, language, subscription_key, request_id, api_url):
         """
         Call the CLU model and return the response.
@@ -85,22 +90,22 @@ class CLUReq:
             return None
 
 
-    # Example usage
+    # # Example usage
 
-    participant_id = "test_user"  # Set this as appropriate
-    text_to_analyze = "What is the difference between football studs and cleats"
-    language = "en"  # Replace with the appropriate language code
+    # participant_id = "test_user"  # Set this as appropriate
+    # text_to_analyze = "What is the difference between football studs and cleats"
+    # language = "en"  # Replace with the appropriate language code
 
-    result = call_clu_model(participant_id, text_to_analyze, language, subscription_key, request_id, api_url)
-    response = handle_clu_response(result)
+    # result = call_clu_model(participant_id, text_to_analyze, language, subscription_key, request_id, api_url)
+    # response = handle_clu_response(result)
 
 
 
-    if result is not None:
-        #print(json.dumps(result, indent=4))
-        print("------------------------------")
-        response = handle_clu_response(result)
-        print(response)
+    # if result is not None:
+    #     #print(json.dumps(result, indent=4))
+    #     print("------------------------------")
+    #     response = handle_clu_response(result)
+    #     print(response)
 
-    else:
-        print("Error calling the CLU model")
+    # else:
+    #     print("Error calling the CLU model")

@@ -5,6 +5,9 @@ import time
 
 class AssistantReq:
 
+    def __init__(self):
+        return
+
     def openAIRequest(self):
         client = OpenAI(api_key=openAiKey)
         # Create a new thread without an initial message

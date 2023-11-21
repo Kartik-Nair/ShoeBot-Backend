@@ -51,3 +51,5 @@ class AssistantReq:
                 if message.role == 'assistant':
                     print("Assistant:", message.content[0].text.value)
 
+            return messages
+

@@ -14,9 +14,9 @@ def run_assistant():
 
     assistantReq = AR.AssistantReq()
 
-    assistantReq.openAIRequest()
+    messages = assistantReq.openAIRequest()
 
-    return
+    return jsonify(messages)
 
 @app.route('/api/clu', methods=['GET'])
 def run_CLU():
@@ -41,7 +41,7 @@ def run_CLU():
     else:
         print("Error calling the CLU model")
 
-    return
+    return jsonify(response)
 
 
 
